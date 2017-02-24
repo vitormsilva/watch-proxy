@@ -1,20 +1,18 @@
-const config = {
-  entry: './index.js',
+module.exports = {
+  entry: "./index.js",
   output: {
-    path: './browser',
-    library: 'WatchProxy',
-    filename: 'WatchProxy.js',
-    libraryTarget: 'umd'
+    path: "./browser",
+    library: "WatchProxy",
+    filename: "WatchProxy.js",
+    libraryTarget: "umd"
   },
   module: {
     rules: [
       {
         use: [
-          { loader: 'babel-loader' }
+          { loader: "babel-loader" }
         ]
       }
     ]
   }
 };
-
-module.exports = config;

@@ -12,7 +12,7 @@
     "prepublish": "npm run webpack"
   },
   "author": "Vitor Silva <vitorsilvaemail@gmail.com> (https://github.com/vitormsilva)",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/vitormsilva/watch-proxy.git"

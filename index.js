@@ -19,6 +19,17 @@ class WatchProxy {
   /**
    *
    *
+   * @readonly
+   *
+   * @memberOf WatchProxy
+   */
+  get observers() {
+    return this._observers;
+  }
+
+  /**
+   *
+   *
    * @param {String} key - name of event you will watching
    * @param {Object} object - object which will be observed
    * @param {boolean} [deep=false] - option if you want deep observe the object;
@@ -55,6 +66,26 @@ class WatchProxy {
     this._observers.push({key: key, callback: callback});
   }
 
+  /**
+   *
+   *
+   * @param {String} key - name of the key you want unobserve
+   * 
+   * @memberOf WatchProxy
+   */
+  unobserve(key) {
+    let index = this._observers.findIndex((obs) => { return obs.key === key });
+    this._observers.splice(index, 1);
+  }
+
+  /**
+   * 
+   * @private
+   * @param {String} key - the key will be trigger
+   * @param {Array<Object>} change - the result of the proxy observe changes
+   * 
+   * @memberOf WatchProxy
+   */
   _fireEvent(key, change) {
 
     this._observers.filter((observe) => {

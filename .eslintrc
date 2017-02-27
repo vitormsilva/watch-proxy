@@ -3,6 +3,7 @@
     "import"
   ],
   "extends": [
+    "eslint-plugin-import",
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings"

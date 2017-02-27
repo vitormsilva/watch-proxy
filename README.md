@@ -28,10 +28,6 @@ objectProxy.property = {}
 
 ```
 
-## Next steps:
-
- - remove observes
-
 ## Feedback
 
 Please open issues to improve this module;

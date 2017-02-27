@@ -80,4 +80,15 @@ describe('WatchProxy', function() {
 
   });
 
+  it('should remove the \change:proxy\ observer', function() {
+    watchProxy2.unobserve('change:proxy');
+    expect(watchProxy2.observers).to.be.empty;
+  })
+
+  it('should remove all observers', function() {
+    watchProxy.unobserve('changes:deepObj');
+    watchProxy.unobserve('changes:obj');
+    expect(watchProxy.observers).to.be.empty;
+  });
+
 });

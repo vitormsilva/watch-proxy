@@ -1,6 +1,6 @@
 {
   "name": "watch-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wrap the proxy-observer with custom observers",
   "main": "./index.js",
   "private": false,
